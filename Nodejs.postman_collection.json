@@ -1,0 +1,704 @@
+{
+	"info": {
+		"_postman_id": "a0ef30ed-c34f-4983-a789-d9e858b4a402",
+		"name": "Nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25423820",
+		"_collection_link": "https://kelltonsenneca.postman.co/workspace/KelltonSenneca-Workspace~81829762-3935-4d27-8fca-f5d1006832cc/collection/25423820-a0ef30ed-c34f-4983-a789-d9e858b4a402?action=share&source=collection_link&creator=25423820"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTk2YTBiNjdlMjMyOTUyNzc1NzRmZSIsImlhdCI6MTc3MTY2NzUyNywiZXhwIjoxNzc5NDQzNTI3fQ.LG1-Y-eh6NyWVp_ErVaRAHngklraNXgbA-nXGYRXgEQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Sony WH-1000XM5 Headphones\",\n  \"price\": 29999,\n  \"description\": \"Industry-leading noise canceling wireless headphones with up to 30 hours of battery life.\",\n  \"summary\": \"Premium noise-canceling over-ear headphones\",\n  \"image\": \"sony-wh1000xm5-main.jpg\",\n  \"images\": [\n    \"sony-wh1000xm5-front.jpg\",\n    \"sony-wh1000xm5-side.jpg\",\n    \"sony-wh1000xm5-case.jpg\"\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/products/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTk2YTBiNjdlMjMyOTUyNzc1NzRmZSIsImlhdCI6MTc3MTkxMTg0NiwiZXhwIjoxNzc5Njg3ODQ2fQ.nTgKxQ8r9A6qmC9RXA0TmCPK9T4oMUgfKyriFJ5sRqE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Oppo  Mobile 15",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1299",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Latest Oppo smartphone with A17 chip",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "Premium flagship smartphone",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6996b188d6a446f10981333f",
+									"type": "text"
+								},
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "/home/izhar.usmani/Downloads/EDA005831502B.jpg"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/home/izhar.usmani/Downloads/71YAxNLjAGL.jpg",
+										"/home/izhar.usmani/Downloads/images (1).jpeg",
+										"/home/izhar.usmani/Downloads/istockphoto-1220907289-612x612.jpg"
+									]
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/products/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Sony WH-1000XM5 Headphones\",\n  \"price\": 29999,\n  \"description\": \"Industry-leading noise canceling wireless headphones with up to 30 hours of battery life.\",\n  \"summary\": \"Premium noise-canceling over-ear headphones\",\n  \"image\": \"sony-wh1000xm5-main.jpg\",\n  \"images\": [\n    \"sony-wh1000xm5-front.jpg\",\n    \"sony-wh1000xm5-side.jpg\",\n    \"sony-wh1000xm5-case.jpg\"\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/products/6995a112a37258a6d9758778",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"products",
+								"6995a112a37258a6d9758778"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Sony WH-1000XM5 Headphones\",\n  \"price\": 29999,\n  \"description\": \"Industry-leading noise canceling wireless headphones with up to 30 hours of battery life.\",\n  \"summary\": \"Premium noise-canceling over-ear headphones\",\n  \"image\": \"sony-wh1000xm5-main.jpg\",\n  \"images\": [\n    \"sony-wh1000xm5-front.jpg\",\n    \"sony-wh1000xm5-side.jpg\",\n    \"sony-wh1000xm5-case.jpg\"\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/products/6995a112a37258a6d9758778",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"products",
+								"6995a112a37258a6d9758778"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"iPhone 15 Pro Max\",\n  \"price\": 139999,\n  \"description\": \"Updated model with larger display and improved camera system\",\n  \"summary\": \"Premium flagship smartphone - Pro Max edition\",\n  \"image\": \"iphone15promax-main.jpg\",\n  \"images\": [\n    \"iphone15promax-1.jpg\",\n    \"iphone15promax-2.jpg\",\n    \"iphone15promax-3.jpg\"\n  ],\n  \"updatedAt\": \"2026-02-18T12:10:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/products/6995a112a37258a6d9758778",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"products",
+								"6995a112a37258a6d9758778"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products By Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Sony WH-1000XM5 Headphones\",\n  \"price\": 29999,\n  \"description\": \"Industry-leading noise canceling wireless headphones with up to 30 hours of battery life.\",\n  \"summary\": \"Premium noise-canceling over-ear headphones\",\n  \"image\": \"sony-wh1000xm5-main.jpg\",\n  \"images\": [\n    \"sony-wh1000xm5-front.jpg\",\n    \"sony-wh1000xm5-side.jpg\",\n    \"sony-wh1000xm5-case.jpg\"\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/products/category/6996b158d6a446f109813331",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"products",
+								"category",
+								"6996b158d6a446f109813331"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rohit 22\",\n    \"email\": \"rohit@gmail.com\",\n    \"password\": \"rohit@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTk2YTBiNjdlMjMyOTUyNzc1NzRmZSIsImlhdCI6MTc3MTY2NzE4NCwiZXhwIjoxNzc5NDQzMTg0fQ.7Ba2v9GHdMWVqEcqF5jWCwELK7jjd5G9Pey024BWxXQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rohit 22\",\n    \"email\": \"rohit@gmail.com\",\n    \"password\": \"rohit@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rohit 22\",\n    \"email\": \"rohit@gmail.com\",\n    \"password\": \"rohit@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/69959b8d0b6af05d0daeaace",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"69959b8d0b6af05d0daeaace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rohit 33\",\n    \"email\": \"rohit33@gmail.com\",\n    \"password\": \"rohit@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/69959b8d0b6af05d0daeaace",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"69959b8d0b6af05d0daeaace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTk2YTBiNjdlMjMyOTUyNzc1NzRmZSIsImlhdCI6MTc3MTY2NzE4NCwiZXhwIjoxNzc5NDQzMTg0fQ.7Ba2v9GHdMWVqEcqF5jWCwELK7jjd5G9Pey024BWxXQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rohit 33\",\n    \"email\": \"rohit33@gmail.com\",\n    \"password\": \"rohit@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/69959b8d0b6af05d0daeaace",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"69959b8d0b6af05d0daeaace"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTk2YTBiNjdlMjMyOTUyNzc1NzRmZSIsImlhdCI6MTc3MTY2NTM4OSwiZXhwIjoxNzc5NDQxMzg5fQ.YOs7F5zS5IXRfh_Slel7ld7aZsldC65DHDxBsOWkGz0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}api/v1/categories/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Test\",\n  \"description\": \"Daily household grocery items\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/categories/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Test 2\",\n  \"description\": \"Daily household grocery items\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/categories/6996b3b3fdf4b37eacfa7edb",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"categories",
+								"6996b3b3fdf4b37eacfa7edb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Test 2\",\n  \"description\": \"Daily household grocery items\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/categories/6996b3b3fdf4b37eacfa7edb",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"categories",
+								"6996b3b3fdf4b37eacfa7edb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Test 2\",\n  \"description\": \"Daily household grocery items\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/categories/6996b158d6a446f109813331",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"categories",
+								"6996b158d6a446f109813331"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"admin\",\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"pass123456\",\n    \"confirmPassword\": \"pass123456\",\n    \"passwordChangedAt\": \"2026-02-21\",\n    \"role\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/signup/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"izharusmani@gmail.com\",\n    \"password\": \"pass123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/login/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stripe",
+			"item": [
+				{
+					"name": "Stripe Session API",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTk2YTBiNjdlMjMyOTUyNzc1NzRmZSIsImlhdCI6MTc3MTgyNzExMCwiZXhwIjoxNzc5NjAzMTEwfQ.EyQFfQQqFAh-nbyExGXp8CpQgXXS3_Am4tXKmNNeFxA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}api/v1/bookings/checkout-session/6996b56bfdf4b37eacfa7eec",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"bookings",
+								"checkout-session",
+								"6996b56bfdf4b37eacfa7eec"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
