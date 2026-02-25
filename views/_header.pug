@@ -1,0 +1,29 @@
+header.top-bar
+    a.logo(href="/") Kellecom 
+
+    .nav-links
+        a(href="/products") Shop
+        a(href="/new") New
+        a(href="/sale") Sale
+
+    .header-icons
+        a(href="/wishlist") 
+            i.far.fa-heart
+
+        a(href="/cart") 
+            i.fas.fa-bag-shopping
+            
+        if user
+            .user-dropdown
+                a.profile-btn(href="#")
+                    i.far.fa-user
+                    span.username= user.name.split(' ')[0]
+
+                .dropdown-menu
+                    //a(href="/profile") Profile
+                    //a(href="/orders") Orders
+                    //hr
+                    a.logout(href="/logout") Logout
+        else
+            a(href="/login") 
+                i.far.fa-user

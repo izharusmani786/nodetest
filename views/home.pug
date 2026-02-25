@@ -1,0 +1,50 @@
+extends base
+
+block content
+    section.hero 
+        .hero-content 
+            span.hero-badge 
+                i.fa-regular.fa-star(style="margin-right: 0.3rem;") 
+                | summer note
+            h1 light layers, 
+                br 
+                | heavy weightless feel
+            p Ultra-soft linen blends engineered for movement. 20% off your first edit.
+            a.btn-primary(href="#") shop the drop →
+        .hero-image 
+            .img-placeholder 
+                i.fa-regular.fa-image 
+                    |  look 24/7
+
+    .categories 
+        .cat-item 
+            i.fa-regular.fa-clock 
+                | new in
+        .cat-item 
+            i.fa-solid.fa-shirt 
+                | ready to wear
+        .cat-item 
+            i.fa-regular.fa-gem 
+                | accessories
+        .cat-item 
+            i.fa-regular.fa-heart 
+                | curated
+        .cat-item 
+            i.fa-regular.fa-tag 
+                | sale
+    .section-title 
+        span curated 
+        | essentials
+
+    .product-grid
+        each product in products
+            .product-card 
+                .product-img 
+                    img(src=`/img/products/${product.imageCover}` alt=product.name)
+                .product-category #{product.category.name}
+                .product-title #{product.name}
+                .product-price $#{product.price}
+                    small $129
+                a.btn-outline(href=`/product/${product.slug}`) 
+                    i.fa-regular.fa-plus 
+                    | View Details

@@ -1,0 +1,45 @@
+extends base
+
+block content
+    .demo-wrapper
+        .login-form
+            h2 welcome back
+            .sub sign in to your bevel account
+            form.form
+                //- email field
+                .input-group
+                    label email
+                    i.fa-regular.fa-envelope
+                    input#email(type="email", placeholder="marcia@example.com", value="")
+
+                //- password field
+                .input-group
+                    label password
+                    i.fa-regular.fa-lock
+                    input#password(type="password", placeholder="••••••••", value="")
+
+                //- remember me + forgot
+                .password-options
+                    label.remember
+                        input(type="checkbox", checked)
+                        |  remember me
+                    a.forgot-link(href="#") forgot password?
+
+                //- login button
+                button.login-btn
+                    span sign in
+                    |  
+                    i.fa-regular.fa-arrow-right-to-bracket
+
+                //- social alternative
+                //- .social-section
+                //-     p or continue with
+                //-     .social-icons
+                //-         i.fa-brands.fa-google
+                //-         i.fa-brands.fa-apple
+                //-         i.fa-brands.fa-facebook-f
+
+                //- link to signup
+                .signup-prompt
+                    | don't have an account? 
+                    a(href="/signup") join kellecom

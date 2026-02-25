@@ -1,0 +1,8 @@
+extends base
+
+block content 
+    h1 User Profile
+    p Welcome to your profile page, #{user.name}!
+    p Email: #{user.email}
+    p Member since: #{user.createdAt.toDateString()}
+    a.btn-primary(href="/logout") Logout

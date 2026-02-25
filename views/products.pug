@@ -1,0 +1,18 @@
+extends base
+
+block content
+    .section-title 
+        span Our 
+        | Products
+    .product-grid
+        each product in products
+            .product-card 
+                .product-img 
+                    img(src=`/img/products/${product.imageCover}` alt=product.name)
+                .product-category #{product.category.name}
+                .product-title #{product.name}
+                .product-price $#{product.price}
+                    small $129
+                a.btn-outline(href=`/product/${product.slug}`) 
+                    i.fa-regular.fa-plus 
+                    | View Details

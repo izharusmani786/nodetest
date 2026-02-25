@@ -1,0 +1,58 @@
+extends base
+
+block content
+    .demo-wrapper
+        .login-form
+            h2 create account
+            .sub join bevel and start shopping
+
+            form(method="POST", action="/api/v1/signup")
+            
+            //- name field
+            .input-group
+                label full name
+                i.fa-regular.fa-user
+                input(type="text", name="name", placeholder="Marcia Johnson", required)
+
+            //- email field
+            .input-group
+                label email
+                i.fa-regular.fa-envelope
+                input(type="email", name="email", placeholder="marcia@example.com", required)
+
+            //- password field
+            .input-group
+                label password
+                i.fa-regular.fa-lock
+                input(type="password", name="password", placeholder="••••••••", required)
+
+            //- confirm password
+            .input-group
+                label confirm password
+                i.fa-regular.fa-lock
+                input(type="password", name="passwordConfirm", placeholder="••••••••", required)
+
+            //- terms checkbox
+            .password-options
+                label.remember
+                    input(type="checkbox", required)
+                    |  I agree to the terms & conditions
+
+            //- signup button
+            button.login-btn(type="submit")
+                span create account
+                |  
+                i.fa-regular.fa-user-plus
+
+            //- social alternative
+            //- .social-section
+            //-     p or sign up with
+            //-     .social-icons
+            //-         i.fa-brands.fa-google
+            //-         i.fa-brands.fa-apple
+            //-         i.fa-brands.fa-facebook-f
+
+            //- link to login
+            .signup-prompt
+                | already have an account? 
+                a(href="/login") sign in

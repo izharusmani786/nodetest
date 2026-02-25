@@ -1,0 +1,165 @@
+extends base
+
+block append head
+    title #{product.name} | Bevel
+    link(rel="stylesheet", href="/css/product-detail.css")
+
+block content
+    .product-detail
+        //- left gallery
+        .gallery-section
+            .main-image
+                .main-img-placeholder
+                    img(src=`/img/products/${product.imageCover}` alt=product.name)
+                    //span(style="font-size: 1.2rem; background: #ffffff60; padding: 0.3rem 1.8rem; border-radius: 40px;") linen blend
+            .thumbnail-row
+                .thumb.active
+                    img(src=`/img/products/${product.imageCover}` alt=product.name)
+                .thumb
+                    img(src=`/img/products/${product.imageCover}` alt=product.name)
+                .thumb
+                    img(src=`/img/products/${product.imageCover}` alt=product.name)
+                .thumb
+                    img(src=`/img/products/${product.imageCover}` alt=product.name)
+
+        //- right product info
+        .product-info
+            .breadcrumb
+                a(href="#") men
+                |  / 
+                a(href="#") shirts
+                |  / 
+                span overshirts
+
+            h1.product-title #{product.name}
+
+            .rating-reviews
+                .stars
+                    i.fa-solid.fa-star
+                    i.fa-solid.fa-star
+                    i.fa-solid.fa-star
+                    i.fa-solid.fa-star
+                    i.fa-regular.fa-star-half-stroke
+                span.review-count 142 reviews
+
+            .price-container
+                span.current-price $#{product.price}
+                span.old-price $129
+                span.badge save 31%
+
+            //- color selector
+            //- .color-selector
+            //-     .color-label
+            //-         | colour · 
+            //-         span(style="font-weight:400;") natural beige
+            //-     .color-options
+            //-         .color-dot.beige.selected(title="beige")
+            //-         .color-dot.slate(title="slate")
+            //-         .color-dot.olive(title="olive")
+            //-         .color-dot.charcoal(title="charcoal")
+
+            //- size
+            //- .size-selector
+            //-     .size-header
+            //-         span size
+            //-         span.size-guide
+            //-             i.fa-regular.fa-ruler
+            //-             |  size guide
+            //-     .size-buttons
+            //-         button.size-btn XS
+            //-         button.size-btn.active S
+            //-         button.size-btn M
+            //-         button.size-btn L
+            //-         button.size-btn XL
+            //-         button.size-btn XXL
+
+            //- quantity + add to cart
+            .quantity-add
+                //- .quantity-selector
+                //-     button -
+                //-     input(type="text", value="1", readonly)
+                //-     button +
+                if user
+                    button.add-to-cart#buy-now(data-product-id=product.id)
+                        i.fa-regular.fa-bag-shopping
+                        |  Buy Now
+                else
+                    a.btn-primary(href="/login")
+                        i.fa-regular.fa-bag-shopping
+                        |  Login to Buy
+
+
+            //- secondary actions
+            .actions-secondary
+                span.action-link
+                    i.fa-regular.fa-heart
+                    |  add to wishlist
+                span.action-link
+                    i.fa-regular.fa-compare
+                    |  compare
+
+            //- delivery info
+            .delivery-info
+                .info-row
+                    i.fa-regular.fa-truck
+                    |  free shipping on orders over $150
+                .info-row
+                    i.fa-regular.fa-rotate-left
+                    |  60-day returns, no questions
+                .info-row
+                    i.fa-regular.fa-leaf
+                    |  carbon-neutral shipping
+
+    //- product details tabs
+    .product-meta
+        .meta-tabs
+            .tab.active description
+            .tab material & care
+            .tab shipping & returns
+        .tab-content
+            ul
+                li
+                    i.fa-regular.fa-check
+                    |  relaxed, boxy fit — 100% european linen
+                li
+                    i.fa-regular.fa-check
+                    |  garment-dyed for a soft, worn-in feel
+                li
+                    i.fa-regular.fa-check
+                    |  chest patch pocket, corozo nut buttons
+                li
+                    i.fa-regular.fa-check
+                    |  pre-washed, no shrinkage. made in portugal
+            p(style="margin-top: 1.2rem; color:#4a4a6a;")
+                | Model is 6'1" and wears size M. Relaxed silhouette — perfect for layering over tees or lightweight knits.
+
+    //- related products
+    h3.related-title complete the look
+
+    .related-grid
+        .related-card
+            .related-img
+                i.fa-regular.fa-shirt
+            h4 linen camp shirt
+            .related-price $79
+
+        .related-card
+            .related-img
+                i.fa-regular.fa-clock
+            h4 pleated trouser
+            .related-price $149
+
+        .related-card
+            .related-img
+                i.fa-regular.fa-lemon
+            h4 cotton tee (2-pack)
+            .related-price $48
+
+        .related-card
+            .related-img
+                i.fa-regular.fa-shoe-prints
+            h4 leather loafers
+            .related-price $210
+
+
+
