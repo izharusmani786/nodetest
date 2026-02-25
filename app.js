@@ -1,6 +1,5 @@
 const path = require('path');
 const express  = require('express');
-const cookieParser = require('cookie-parser');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -11,6 +10,8 @@ const appError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');    
 const cors = require('cors');
 const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const compression = require('compression');
 const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
 const categoryRouter = require('./routes/categoryRoutes');
@@ -24,6 +25,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
+app.use(compression());
 
 app.use('/', viewRouter);
 app.use('/api/v1/users', userRouter);
